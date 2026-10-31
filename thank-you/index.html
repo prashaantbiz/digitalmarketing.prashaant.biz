@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | prashaant.biz</title>
+  <meta name="description" content="Your enquiry has been received. We will review your clinic details and get in touch shortly.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Clean Sans-Serif Typography (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="ty-page-body">
+
+  <!-- MINIMAL NAVIGATION: CENTERED LOGO + BACK TO WEBSITE -->
+  <header class="site-header" id="top">
+    <div class="container ty-nav-bar">
+      <a href="/" class="ty-nav-center-logo" aria-label="prashaant.biz Home">
+        <img src="/assets/logo.png" alt="prashaant.biz" class="brand-logo-img">
+      </a>
+
+      <a href="/" class="ty-nav-back">Back to Website</a>
+    </div>
+  </header>
+
+  <main class="ty-main">
+    <!-- MAIN CONFIRMATION HERO -->
+    <section class="ty-hero-section">
+      <div class="container">
+        <div class="ty-hero-panel">
+          <!-- Subtle Outlined Circle with Minimal Checkmark -->
+          <div class="ty-confirm-visual" aria-hidden="true">
+            <svg class="ty-confirm-svg" viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+
+          <div class="ty-label">ENQUIRY RECEIVED</div>
+
+          <h1 class="ty-headline">
+            Thank You. We've Received Your Details.
+          </h1>
+
+          <p class="ty-supporting">
+            Your information has been successfully submitted. We'll review your details and get in touch with you shortly.
+          </p>
+
+          <p id="ty-personalized-summary" class="ty-personalised-note" hidden></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT HAPPENS NEXT (3-STEP SECTION) -->
+    <section class="ty-steps-section">
+      <div class="container">
+        <h2 class="ty-section-heading">What Happens Next?</h2>
+
+        <div class="ty-steps-grid">
+          <article class="ty-step-item">
+            <div class="ty-step-num">01</div>
+            <h3 class="ty-step-title"><span class="ty-step-dash">—</span> We Review</h3>
+            <p class="ty-step-desc">
+              We'll review the information you submitted about your clinic and marketing needs.
+            </p>
+          </article>
+
+          <article class="ty-step-item">
+            <div class="ty-step-num">02</div>
+            <h3 class="ty-step-title"><span class="ty-step-dash">—</span> We Get in Touch</h3>
+            <p class="ty-step-desc">
+              We'll contact you using the details you provided.
+            </p>
+          </article>
+
+          <article class="ty-step-item">
+            <div class="ty-step-num">03</div>
+            <h3 class="ty-step-title"><span class="ty-step-dash">—</span> We Discuss Your Growth</h3>
+            <p class="ty-step-desc">
+              We'll understand your current situation and discuss where digital marketing can help.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST MESSAGE + OPTIONAL NEXT ACTION -->
+    <section class="ty-trust-section">
+      <div class="container ty-trust-layout">
+        <!-- Personal Credibility Statement -->
+        <div class="ty-trust-card glass-surface">
+          <img
+            src="/assets/prashant-portrait.jpg"
+            alt="Prashant Chaudharee"
+            class="ty-trust-avatar"
+            width="64"
+            height="64"
+          >
+          <div>
+            <p class="ty-trust-copy">
+              Your enquiry is handled personally by <strong>Prashant Chaudharee</strong>, a digital marketing consultant focused on helping businesses build measurable digital growth.
+            </p>
+            <span class="ty-trust-meta">prashaant.biz · Nepalgunj, Banke, Nepal</span>
+          </div>
+        </div>
+
+        <!-- Secondary Action: While You Wait -->
+        <div class="ty-wait-box">
+          <h3 class="ty-wait-title">While You Wait</h3>
+          <p class="ty-wait-text">
+            Explore how strategic digital marketing can help turn online attention into genuine patient enquiries.
+          </p>
+          <a href="/" class="btn btn-secondary btn-full">Back to Website</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL MESSAGE -->
+    <section class="ty-final-bar">
+      <div class="container">
+        <p class="ty-final-statement">
+          Your next step is simple: <span class="text-highlight">we'll be in touch.</span>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- MINIMAL FOOTER -->
+  <footer class="site-footer ty-footer">
+    <div class="container footer-row">
+      <div class="footer-brand">
+        <img src="/assets/logo.png" alt="prashaant.biz" class="footer-logo-img">
+        <p class="footer-meta">Prashant Chaudharee · Digital Marketing Consultant · Nepalgunj, Banke, Nepal</p>
+      </div>
+
+      <div class="footer-contact">
+        <a href="mailto:mail@prashaant.biz" class="footer-link">mail@prashaant.biz</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Display optional non-intrusive personalization if lead details are in sessionStorage
+    document.addEventListener('DOMContentLoaded', () => {
+      try {
+        const rawLead = sessionStorage.getItem('prashaant_lead_data');
+        if (rawLead) {
+          const lead = JSON.parse(rawLead);
+          const summaryEl = document.getElementById('ty-personalized-summary');
+          if (summaryEl && lead.firstName && lead.clinicName) {
+            summaryEl.textContent = `Logged for ${lead.firstName} (${lead.clinicName})`;
+            summaryEl.hidden = false;
+          }
+        }
+      } catch (err) {
+        // Ignore storage errors in strict privacy browsers
+      }
+    });
+  </script>
+</body>
+</html>
