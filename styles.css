@@ -378,6 +378,71 @@ ul {
   border-radius: 999px;
 }
 
+/* Mobile-only Hero overrides (leaves desktop >= 769px completely untouched) */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 8px 0 76px;
+  }
+
+  .hero-stage-container {
+    padding: 0 12px;
+  }
+
+  .hero-stage {
+    min-height: auto;
+    padding: 0 0 28px;
+    justify-content: flex-start;
+    background-color: var(--bg-black);
+  }
+
+  .hero-portrait-backdrop {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 74%;
+    max-width: 280px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+  }
+
+  .hero-portrait-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center top;
+    opacity: 0.92;
+  }
+
+  .hero-portrait-backdrop::after {
+    background:
+      linear-gradient(to bottom, rgba(0, 0, 0, 0) 38%, rgba(0, 0, 0, 0.82) 74%, #000000 98%),
+      radial-gradient(circle at center, rgba(0, 0, 0, 0) 48%, #000000 96%);
+  }
+
+  .hero-overlay-content {
+    margin-top: -68px;
+    padding: 0 16px;
+    max-width: 100%;
+  }
+
+  .hero-statement {
+    font-size: clamp(28px, 8vw, 40px);
+    line-height: 1.1;
+    text-align: center;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+    margin-bottom: 20px;
+    padding: 0 16px;
+  }
+
+  .hero-subline {
+    display: none;
+  }
+}
+
 /* ==========================================================================
    6. PROBLEM SECTION
    ========================================================================== */
