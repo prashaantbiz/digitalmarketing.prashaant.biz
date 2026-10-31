@@ -483,6 +483,29 @@ ul {
     padding: 6px 14px;
     margin-top: 12px;
   }
+
+  /* Mobile-only Brevo Form Iframe Container Fixes */
+  .lead-capture-section {
+    padding: 40px 0 56px;
+  }
+
+  .lead-capture-centered {
+    padding: 0 16px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .lead-capture-centered iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: 760px !important;
+    min-height: 760px !important;
+    margin: 0 auto !important;
+    border-radius: 12px;
+    box-sizing: border-box;
+  }
 }
 
 /* ==========================================================================
